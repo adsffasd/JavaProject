@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+/* Use Flexbox to center the container */
+.container {
+	padding-top: 50px;
+	/* Adds space at the top inside the container */
+}
+
+.form-border {
+	border: 1px solid #dee2e6;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	/* Optional: in case you have a non-white background */
+}
+
+/* This is to ensure the form is centered on medium devices and takes full width on small devices */
+.col-md-6 {
+	flex: 0 0 auto;
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.col-md-6 {
+		flex: 0 0 auto;
+		width: 50%;
+	}
+
+	.offset-md-3 {
+		margin-left: 25%;
+	}
+}

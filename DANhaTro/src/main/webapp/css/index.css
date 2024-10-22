@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/*Navbar*/
+/* Đảm bảo rằng container-fluid là một flex container và items được căn giữa theo chiều dọc */
+.container-fluid {
+	display: flex;
+	align-items: center;
+}
+
+/* Đối với logo, bạn có thể muốn thêm */
+.navbar-brand {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-nav .nav-link:hover {
+	background-color: #f0f0f0;
+	/* Change to desired hover color */
+	color: #333;
+	/* Change text color on hover if needed */
+}
+
+.navbar-nav .nav-link {
+	white-space: nowrap;
+	/* Prevents the text from wrapping */
+}
+
+/* Additional styles to ensure proper spacing and alignment */
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	padding-left: 0;
+	/* Adjust as necessary */
+}
+
+.navbar-nav .nav-item {
+	padding: 0.5rem 1rem;
+	/* Adjust as necessary */
+}
+
+/* Ensure the form does not push content down */
+@media (min-width: 992px) {
+	.navbar-expand-lg .navbar-nav .nav-item {
+		flex-basis: auto;
+	}
+}
+
+/* Fix for the search form to align correctly */
+.navbar .form-inline {
+	flex-grow: 1;
+}
+
+.navbar .form-inline .form-control {
+	width: auto;
+	flex-grow: 1;
+}
+
+.register {
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid black;
+}
+
+.login {
+	position: absolute;
+	right: 110px;
+	top: 15px;
+	text-decoration: none;
+	padding: 10px;
+	border: 2px solid black;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1; /* This will make the card stretch to fill the column */
+}
